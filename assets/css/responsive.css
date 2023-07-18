@@ -1,0 +1,119 @@
+@media (max-width: 991px) {
+
+    html{
+        font-size: 55%;
+    }
+
+    .project .box-container{
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0.5rem;
+        grid-template-areas: 
+        'image1-1 image1-1 image1-2'
+        'image1-3 image2-1 image2-2'
+        'image2-3 image2-3 image2-3'
+    }
+
+}
+
+@media(max-width: 786px){
+
+    section, .header, .footer{
+        padding: 2rem;
+    }
+
+    .header #menu-btn{
+        display: initial;
+    }
+
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: 0%;
+        background: var(--white);
+        -webkit-box-shadow: var(--box-shadow);
+                box-shadow: var(--box-shadow);
+        width: 30rem;
+        height: calc(100vh - 7rem);
+        padding: 2rem;
+        overflow-y: auto;
+        transform: translateX(100%);
+        border: 0.1rem solid var(--purple);
+        border-top: 2px solid var(--purple);
+        -webkit-transition: 0.2s linear;
+        -moz-transition: 0.2s linear;
+        -o-transition: 0.2s linear;
+        transition: 0.2s linear;
+    }
+
+    .header .navbar.active{
+        transform: translateX(0%);
+    }
+
+    .header .navbar a{
+        display: block;
+        color: var(--black);
+        padding: 1.5rem 0;
+        margin: 1rem 0;
+    }
+
+    .navbar::-webkit-scrollbar{
+        width: 0.8rem;
+    }
+  
+    .navbar::-webkit-scrollbar-thumb{
+        border-radius: 1rem;
+        background-color: var(--purple);
+    }
+  
+    .navbar::-webkit-scrollbar-track{
+        background: transparent;
+    }
+
+    .home-item .content .text{
+        padding: 0% 15%;
+    }
+
+    .project .box-container{
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0.5rem;
+        grid-template-areas: 
+        'image1-1 image1-1'
+        'image1-2 image1-3' 
+        'image2-1 image2-2'
+        'image2-3 image2-3'
+    }
+
+}
+
+@media(max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    section, .header, .footer{
+        padding: 1rem;
+    }
+
+    .project .box-container{
+        display: -ms-grid;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 0.5rem;
+        grid-template-areas: 
+        'image1-1'
+        'image1-2' 
+        'image1-3' 
+        'image2-1' 
+        'image2-2'
+        'image2-3'
+    }
+
+}

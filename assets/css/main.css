@@ -1,0 +1,1475 @@
+/* Table of Contents
+----------------------------------
+
+0- Global CSS
+1- Heading CSS
+2- Button CSS
+3- Logo Area CSS
+4- Header Area CSS
+5- Home Area CSS
+6- About Area CSS
+7- Counter Area CSS
+8- Service Area CSS
+9- Team Area CSS
+10- Project Area CSS
+11- Testimonials Area CSS 
+12- Price Area CSS
+13- Blog Area CSS
+14- Contact Area CSS 
+15- Footer Area CSS
+16- Scroll-Top Area CSS
+
+*/
+
+
+/*--------------------- 0- Global CSS (Start) ---------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+:root{
+    --blue: #1D2843;
+    --purple: #52789D;
+    --white: #fff;
+    --black: #000;
+    --grey: #666;
+    --box-shadow: 2px 1px 8px -3px rgba(0, 0, 0, 0.2);
+    --text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+
+    outline: none;
+    border: none;
+
+    text-decoration: none;
+    text-transform: capitalize;
+
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+*::selection{
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+html{
+    font-size: 62.6%;
+    overflow-x: hidden;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track{
+    background: var(--black);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--purple);
+    border-radius: 0.5rem;
+}
+
+body{
+    background: var(--white);
+}
+
+a{
+    text-decoration:none;
+}
+
+section{
+    padding: 2rem 5%;
+}
+
+.swiper-pagination-bullet{
+    height: 1rem;
+    width: 3rem;
+    border-radius : 50rem;
+    background: var(--blue);
+    opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active{
+    width: 6rem;
+    background-color: var(--purple);
+    opacity: 0.9;
+}
+
+/*--------------------- 0- Global CSS (End) ---------------------*/
+
+
+
+/*--------------------- 1- Heading CSS (Start) ---------------------*/
+.heading{
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 500;
+    color: var(--black);
+    text-shadow: var(--text-shadow);
+    padding-bottom: 2rem;
+}
+
+.heading span {
+    color: var(--blue);
+    text-shadow: var(--text-shadow);
+}
+
+/*--------------------- 1- Heading CSS (End) ---------------------*/
+
+
+
+/*--------------------- 2- Button CSS (Start) ---------------------*/
+.btn{
+    font-size: 1.4rem;
+    padding: 1.2rem 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    background-size: 200% auto;
+    color: var(--white);
+    border-radius: 1rem;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    -webkit-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    -moz-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    -o-transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    background: -webkit-linear-gradient(left, var(--purple) 0%, var(--blue) 51%, var(--purple) 100%);
+    background:         linear-gradient(to right, var(--purple) 0%, var(--blue) 51%, var(--purple) 100%);
+}
+
+.btn:hover{
+    -webkit-box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    background-position: right center;
+}
+
+/*--------------------- 2- Button CSS (End) ---------------------*/
+
+
+
+/*--------------------- 3- Logo Area CSS (Start) ---------------------*/
+.logo{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    gap: 0.5rem;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.logo h3{
+    font-size: 2rem;
+    letter-spacing: 0.1rem;
+    color: var(--blue);
+}
+
+.logo p{
+    font-size: 1.3rem;
+    color: var(--grey);
+}
+/*--------------------- 3- Logo Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 4- Header CSS (Start) ---------------------*/
+.header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 2rem 5%;
+    background: var(--white);
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header #menu-btn{
+    font-size: 2.4rem;
+    color: var(--purple);
+    cursor: pointer;
+    display: none;
+}
+
+.header .navbar a{
+    display: inline-block;
+    color: var(--black);
+    font-size: 1.6rem;
+    padding: 0 0.5rem;
+}
+
+.header .navbar a:hover,
+.header .navbar a.active{
+    color: var(--purple);
+}
+
+/*--------------------- 4- Header CSS (End) ---------------------*/
+
+
+
+/*--------------------- 5- Home Area CSS (Start) ---------------------*/
+.home{
+    padding: 0;
+    width: 100%;
+    height: 1px;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.home-slider{
+    position: relative;
+}
+
+.home-slider .swiper-button-next,
+.home-slider .swiper-button-prev{
+    background: var(--purple);
+    color: var(--white);
+    padding: 2rem;
+    font-size: 1rem;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+}
+
+.home-slider .swiper-button-next::after,
+.home-slider .swiper-button-prev::after {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.home-slider .swiper-button-next:hover,
+.home-slider .swiper-button-prev:hover {
+    background-color: var(--blue);
+}
+
+.home-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-item .content{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6));
+    background:         linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.6));
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+}
+
+.home-item .content .text{
+    padding-top: 10rem;
+    text-align: center;
+    padding: 0% 20%;
+}
+
+.home-item .content h1{
+    color: var(--white);
+    font-size: 3.5rem;
+    text-shadow: var(--text-shadow);
+    letter-spacing: 0.1rem;
+}
+
+.home-item .content p{
+    color: var(--white);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 1.5rem 0;
+}
+
+/*--------------------- 5- Home Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 6- About Area CSS (Start) ---------------------*/
+.about .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 4rem;
+}
+
+.about .image{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+    height: 45rem;
+    position: relative;
+}
+
+.about .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .image h2{
+    position: absolute;
+    top: -3%;
+    left: -2%;
+    background: var(--purple);
+    font-size: 2.5rem;
+    text-align: center;
+    color: var(--white);
+    width: 18rem;
+    height: 10rem;
+    padding: 1.5rem;
+    -webkit-clip-path: polygon(15% 0, 100% 0, 100% 79%, 86% 100%, 0 100%, 0 23%);
+            clip-path: polygon(15% 0, 100% 0, 100% 79%, 86% 100%, 0 100%, 0 23%);
+}
+
+.about .content{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+}
+
+.about .content h3{
+    font-size: 3.5rem;
+    font-weight: 500;
+    color: var(--black);
+    letter-spacing: 0.1rem;
+    margin-bottom: 3rem;
+}
+
+.about .content p{
+    color: var(--grey);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    padding-bottom: 1.5rem;
+}
+/*--------------------- 6- About Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 7- Counter Area CSS (Start) ---------------------*/
+.counter{
+    width: 100%;
+    padding: 2rem 5%;
+    margin: 1rem 0;
+    min-height: 15rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 3rem;
+    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(../images/Counter/counter.jpg);
+    background:         linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6)), url(../images/Counter/Counter.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+    
+.counter-item{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 25rem;
+        flex: 1 1 25rem;
+    text-align: center;
+    padding: 2rem;
+    color:var(--white);
+}
+
+.counter-item i{
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.counter-item h2{
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.counter-item p{
+    font-size: 1.7rem;
+}
+
+/*--------------------- 7- Counter Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 8- Service Area CSS (Start) ---------------------*/
+.service .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1.5rem;
+}
+
+.service-item{
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.service-item .image{
+    height: 25rem;
+}
+
+.service-item .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.service-item .shape{
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    transform: translateY(-50%);
+    background-color: var(--purple);
+    -webkit-clip-path: polygon(15% 0, 85% 3%, 100% 50%, 100% 50%, 85% 100%, 15% 100%, 0 50%, 0 50%);
+            clip-path: polygon(15% 0, 85% 3%, 100% 50%, 100% 50%, 85% 100%, 15% 100%, 0 50%, 0 50%);
+}
+
+.service-item .content{
+    position: relative;
+    padding: 1.5rem;
+    padding-top: 4rem;
+    text-align: center;
+    background: var(--white);
+}
+
+.service-item .content h3{
+    color: var(--white);
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.service-item .content p{
+    color: var(--grey);
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+
+/*--------------------- 8- Service Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 9- Team Area CSS (Start) ---------------------*/
+
+
+.team .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(25rem,1fr));
+    gap: 1.5rem;
+}
+
+.team-item{
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    position: relative;
+    margin-bottom: 9rem;
+}
+
+.team-item .image{
+    overflow: hidden;
+    height: 35rem;
+    position: relative;
+    border-radius: 0.5rem;
+}
+
+.team-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-item .icons{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    gap: 0.5rem;
+}
+
+.team-item:hover .icons{
+    top: 0%;
+}
+
+.team-item .icons a{
+    padding: 1rem;
+    font-size: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    color: var(--purple);
+    background: transparent;
+    border: 0.1rem solid var(--purple);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+}
+
+.team-item .icons a:hover {
+    color: var(--white);
+    background: var(--purple);
+}
+
+.team-item .content{
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    -webkit-transform: translateY(70%);
+            transform: translateY(70%);
+    background-color: var(--white);
+    width: 90%;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border-bottom: 5px solid var(--purple);
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    border-radius: 0.5rem;
+}
+
+.team-item:hover .content{
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+}
+
+.team-item .content h2{
+    color: var(--black);
+    font-size: 2.2rem;
+    font-weight: 500;
+    padding-bottom: 0.5rem;
+}
+
+.team-item .content p{
+    color: var(--grey);
+    font-size: 1.6rem;
+    padding-bottom: 1.5rem;
+}
+
+/*--------------------- 9- Team Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 10- project Area CSS (Start) ---------------------*/
+.project .controls{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    list-style-type: none;
+    gap: 0.5rem;
+    margin: 2rem 0;
+}
+
+.project .controls .button{
+    padding: 1rem 2.5rem;
+    font-size: 2rem;
+    background: var(--purple);
+    color: var(--white);
+    cursor: pointer;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+}
+
+.project .controls .button.active{
+    background: var(--black);
+}
+
+.project .box-container{
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 0.5rem;
+}
+
+.project-item{
+    height: 25rem;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+}
+
+.project-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.project-item:hover img{
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    filter: brightness(0.5);
+}
+
+.project-item .content{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 80%;
+    height: 60%;
+    padding: 1rem;
+    -webkit-transform: rotatex(90deg);
+            transform: rotatex(90deg);
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    background: rgba(0, 0, 0, 0.7);
+    text-align: left;
+}
+
+.project-item:hover .content{
+    -webkit-transform: rotatex(0deg);
+            transform: rotatex(0deg);
+}
+
+.project-item .content h3{
+    color: var(--white);
+    font-size: 2.3rem;
+    font-weight: 500;
+    padding-bottom: 1rem;
+}
+
+.project-item .content p{
+    color: var(--white);
+    font-size: 1.8rem;
+    padding-bottom: 2.5rem;
+}
+
+.project-item .content a{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.project-item .content i{
+    font-size: 2rem;
+    height: 4rem;
+    width: 4rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    color: var(--white);
+    background: var(--purple);
+    border-radius: 50%;
+    margin: 0rem auto;
+}
+
+.project-item .content i:hover{
+    background: var(--white);
+    color:var(--purple);
+}
+
+/*------------------------------ ROW-1 ------------------------------*/
+.image1-1{
+    grid-area: image1-1;
+}
+
+.image1-2{
+    grid-area: image1-2;
+}
+
+.image1-3{
+    grid-area: image1-3;
+}
+
+/*------------------------------ ROW-2 ------------------------------*/
+.image2-1{
+    grid-area: image2-1;
+}
+
+.image2-2{
+    grid-area: image2-2;
+}
+
+.image2-3{
+    grid-area: image2-3;
+}
+
+/*------------------------------ ROW-3 ------------------------------*/
+.image3-1{
+    grid-area: image3-1;
+}
+
+.image3-2{
+    grid-area: image3-2;
+}
+
+.image3-3{
+    grid-area: image3-3;
+}
+
+/*--------------------- 10- Project Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 11- review Area CSS (Start) ---------------------*/
+.testimonial{
+    padding: 4rem 5%;
+}
+
+.testimonial-slider{
+    padding-bottom: 4rem !important; 
+}
+
+.testi-item{
+    background: var(--white);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    padding: 4rem 2rem;  
+    z-index: 0; 
+}
+
+.testi-item .profile{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+}
+
+.testi-item .profile .image{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    gap: 1rem;
+}
+
+.testi-item .profile .image img{
+    width: 8rem;
+    border-radius: 50%;
+}
+
+.testi-item .profile .info h3{
+    font-size: 1.8rem;
+    color: var(--black);
+    padding-bottom: 0.3rem;
+}
+
+.testi-item .profile .info p{
+    font-size: 1.3rem;
+    color: var(--grey);
+    padding-bottom: 0.5rem;
+}
+
+.testi-item .profile .icons{
+    color: rgb(255,226,52);
+    font-size: 1.3rem;
+}
+
+.testi-item .profile .fa-comments{
+    font-size: 5.5rem;
+    color: rgba(0, 0, 0, 0.05);
+}
+
+.testi-item .content{
+    padding-top: 3rem;
+}
+
+.testi-item .content p{
+    font-size: 1.4rem;
+    line-height: 2;
+    color: var(--grey);
+}
+
+/*--------------------- 11- review Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 12- Price Area CSS (Start) ---------------------*/
+.pricing{
+    background: var(--white);
+}
+
+.pricing .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1rem;
+}
+
+.price-item{ 
+    text-align: center;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    background: var(--white);
+    padding-bottom: 2rem;
+}
+
+.price-item .intro{
+    background: -webkit-linear-gradient(left, var(--purple) 0%, var(--blue) 51%, var(--purple) 100%);
+    background:         linear-gradient(to right, var(--purple) 0%, var(--blue) 51%, var(--purple) 100%);
+}
+
+.price-item .name{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.price-item .intro h3{
+    font-size: 2.8rem;
+    font-weight: 500;
+    color: var(--white);
+    padding: 0rem 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.1rem solid var(--white);
+}
+
+.price-item .intro .price{
+    color:var(--white);
+    font-size: 5rem;
+    font-weight: 400;
+    padding: 2rem 0;
+  }
+  
+.price-item .intro .price span{
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.price-item ul{
+    padding: 2rem 0;
+}
+
+.price-item ul li{
+    width: 70%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+    text-align: left;
+    padding: 0.2rem 0;
+    margin: 0rem auto;
+}
+
+.price-item ul li i{
+    color: var(--purple);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.price-item ul li p{
+    color: var(--grey);
+    font-size: 1.5rem;
+}
+
+/*--------------------- 12- Price Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 13- Blog Area CSS (Start) ---------------------*/
+.blog .box-container{
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    gap: 1rem;
+}
+
+.blog-item{
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.blog-item .image{
+    height: 25rem;
+}
+
+.blog-item .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.blog-item .content{
+    padding: 2rem 1rem;
+}
+
+.blog-item .content h5{
+    display: inline-block;
+    color: var(--grey);
+    line-height: 1.6;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-top: 0.5rem;
+}
+
+.blog-item .content span{
+    color: var(--purple);
+}
+
+.blog-item .content .main-heading{
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 500;
+    color: var(--black);
+}
+
+.blog-item .content .main-heading:hover{
+    color: var(--purple);
+}
+
+.blog-item p{
+    color: var(--grey);
+    padding-top: 2rem;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}
+
+/*--------------------- 13- Blog Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 14- Contact Area CSS (End) ---------------------*/
+.contact-info{
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.contact-info .info-item{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.contact-info .info-item i{
+    background:var(--purple);
+    color: var(--white);
+    font-size: 2rem;
+    height: 6rem;
+    width: 6rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center; 
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;  
+}
+
+.contact-info .info-item:hover i{
+    -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
+}
+
+.contact-info .info-item h3{
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.contact-info .info-item p{
+    color: var(--grey);
+    font-size: 1.5rem;
+    text-transform: none;
+}
+
+.contact .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.contact iframe{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+}
+
+.contact-form{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 40rem;
+        flex: 1 1 40rem;
+    background: var(--white);
+    padding: 1rem 2rem;
+}
+
+.contact-form h3{
+    text-align: center;
+    color: var(--black);
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.contact-form .box{
+    width: 100%;
+    font-size: 1.6rem;
+    padding: 1rem 1.5rem;
+    color: var(--black);
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    margin-bottom: 1rem;
+}
+
+.contact-form input::placeholder{
+    text-transform: capitalize;
+    color: var(--grey);
+}
+
+.contact-form input:focus {
+    border: 0.1rem solid var(--purple);
+}
+
+.contact-form textarea{
+    width: 100%;
+    height: 15rem;
+    resize: none;
+}
+
+.contact-form .alert{
+    font-size: 2rem;
+    color: var(--blue);
+    padding-left: 1rem;
+}
+
+/*--------------------- 14- Contact Area CSS (End) ---------------------*/
+
+
+
+/*--------------------- 15 - footer Area CSS (Start) ---------------------*/
+.footer{
+    background: var(--black);
+    padding: 0rem 5%;
+}
+
+.footer .box-container{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.footer-item{
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 33rem;
+        flex: 1 1 33rem;
+}
+
+.footer-item .logo p{
+    color: var(--black);
+}
+
+.footer-item > p{
+    color: var(--white);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    padding-top: 1rem;
+}
+
+.footer-item h2{
+    color: var(--white);
+    font-size: 2.5rem;
+    font-weight: 500;
+    letter-spacing: 0.2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-item .info p{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.footer-item .info i{
+    color: var(--white);
+    padding-right: 1rem;
+}
+
+.footer-item .info .gmail{
+    text-transform: none;
+}
+
+.footer-item .social{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.footer-item .social a{
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    background-color: var(--white);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.footer-item .social a i{
+    color: var(--blue);
+    font-size: 2rem;
+}
+
+.footer-item .social a:hover{
+    background-color: var(--blue);
+}
+
+.footer-item .social a:hover i{
+    color: var(--white);
+}
+
+.footer-item .links a,
+.footer-item .iinks p{
+    display: block;
+    font-size: 1.6rem;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.footer-item .links a i,
+.footer-item .links p i{
+    padding-right: 0.5rem;
+    color: var(--blue);
+}
+
+.footer-item .links a:hover{
+    color: var(--blue);
+}
+
+.footer > .content{
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 0.1rem solid var(--white);
+}
+
+.footer > .content p{
+    font-size: 2.2rem;
+    color: var(--white);
+}
+
+.footer > .content p span{
+    color: var(--blue);
+}
+
+/* ---------------- 15 - footer Area CSS (End) ---------------------*/
+
+
+
+/* ---------------- 16 - Scroll-Top Area CSS (Start) ---------------------*/
+.scroll-top{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    height: 5rem;
+    width: 5rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: var(--white);
+    background: var(--blue);
+    -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.scroll-top.active{
+    background: var(--purple);
+}
+
+/* ---------------- 16 - Scroll-Top  Area CSS (End) ---------------------*/
+
+
+
+
+
+
+
+/* <!-- CPA --> */
+#main-div {
+    position: fixed;
+    left: 60px;
+    bottom: 20px;
+    z-index: 0;
+  }
+  
+  #main-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    color: #0064f3;
+    cursor: pointer;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+  
+  #main-button ~ button {
+    visibility: hidden;
+    font-weight: 600;
+    height: 50px;
+    padding: 0 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #00a1f5, #0064f3);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    border: 0;
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: .2s all linear;
+    -webkit-transition: .2s all linear;
+    -moz-transition: .2s all linear;
+    -ms-transition: .2s all linear;
+    -o-transition: .2s all linear;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+  }
+  
+  #main-button.open ~ button {
+    visibility: visible;
+    right: 70px;
+    opacity: 1;
+    transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -webkit-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -moz-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -ms-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -o-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  }
+  
+  #main-button ~ a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
+    opacity: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.5);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    transition: .2s all linear;
+    -webkit-transition: .2s all linear;
+    -moz-transition: .2s all linear;
+    -ms-transition: .2s all linear;
+    -o-transition: .2s all linear;
+  }
+  
+  #main-button ~ .telegram-color {
+    background: linear-gradient(0deg, #017AB1, #01ABE6);
+  }
+  
+  #main-button ~ .whatsapp-color {
+    background: linear-gradient(0deg, #00B100, #09db09);
+  }
+  
+  #main-button ~ .messenger-color {
+    background: linear-gradient(0deg, #0078FF, #00C6FF);
+  }
+  
+  #main-button.open ~ a {
+    opacity: 1;
+    transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -webkit-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -moz-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -ms-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+    -o-transition: .4s all cubic-bezier(0, 0.01, 0, 1.27);
+  }
+  #main-button.open ~ a:nth-of-type(1) {
+    bottom: 60px;
+  }
+  #main-button.open ~ a:nth-of-type(2) {
+    bottom: 120px;
+  }
+  #main-button.open ~ a:nth-of-type(3) {
+    bottom: 180px;
+  }
+  
+  .wave {
+    animation-name: wave;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  
+  @keyframes wave {
+    0% {box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.5);}
+    100% {box-shadow: 0 0 0px 10px rgba(255, 255, 255, 0);}
+  }
+  
+  .open {
+    animation-iteration-count: 1;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
